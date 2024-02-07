@@ -97,6 +97,7 @@ class PlayList {
         }
         if (i == size) {
             tracks[i] = track;
+            this.size = size+1;////////////////////
             return true;
         }
         if (size==maxSize) {
@@ -192,7 +193,6 @@ class PlayList {
         // Uses the selection sort algorithm,  
             // calling the minIndex method in each iteration.
             //// replace this statement with your code
-        int ogSize = this.getSize();
         for (int i = 0; i < size; i++) {
             this.add(i,tracks[minIndex(i)]);
             this.remove(minIndex(i+1));
