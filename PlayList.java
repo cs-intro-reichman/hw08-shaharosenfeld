@@ -40,7 +40,7 @@ class PlayList {
         }
         else{
             tracks[size] = track;
-            size++;
+            this.size++;
         }
         return true;
     }
@@ -62,7 +62,7 @@ class PlayList {
             return;
         }
         tracks[size-1] = null; 
-        size--;
+        this.size--;
     }
     
     /** Returns the total duration (in seconds) of all the tracks in this list.*/
@@ -106,7 +106,7 @@ class PlayList {
             tracks[j] = tracks[j-1];
         }
         tracks[i] = track;
-        size++;
+        this.size++;
         return true;
     }
      
@@ -120,7 +120,7 @@ class PlayList {
         for (int j = i+1; j < size; j++) {
             tracks[j-1] = tracks[j];
         }
-        size--;
+        this.size--;
     }
 
     /** Removes the first track that has the given title from this list.
@@ -152,7 +152,7 @@ class PlayList {
         int startingSize = this.getSize();
         for (int i = 0; i < other.getSize(); i++) {
             this.tracks[startingSize +i] = other.tracks[i];
-            size++;
+            this.size++;
             } 
         }
     
